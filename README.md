@@ -4,4 +4,4 @@ Get-VM | Get-Snapshot | Remove-Snapshot -confirm:$false
 
 # To remove all snapshots from all VMs older than Feb 1, 2017:
 powershell
-Get-VM | Get-Snapshot | Where-Object {$_.Created -lt (Get-Date 1/Feb/2017)} | Remove-Snapshot -Confirm:$false
+Get-VM | Get-Snapshot | Where-Object {$_.Created -lt (Get-Date 1/Feb/2019)} | Remove-Snapshot -Confirm:$false
