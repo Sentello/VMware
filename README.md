@@ -12,14 +12,13 @@ cd /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/esxi_backup
 
 edit file:  vi esxi_backup.sh
 
-
-
+```
 #!/bin/sh
 vim-cmd hostsvc/firmware/sync_config
 vim-cmd hostsvc/firmware/backup_config
 find /scratch/downloads/ -name \*.tgz -exec cp {} /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ESXi_config_backup_$(hostname)_$(date +’%Y%m%d_%H%M%S’).tgz \;
 find /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ -type f -name '*.tgz' -mtime +20 -exec rm {} \;
-
+```
 change permissions:  chmod +x esxi_backup.sh
 
 Create Cron Job: vi /var/spool/cron/crontabs/root
