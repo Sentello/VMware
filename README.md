@@ -10,7 +10,7 @@ Get-VM | Get-Snapshot | Where-Object {$_.Created -lt (Get-Date 1/Feb/2019)} | Re
 
 cd /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/esxi_backup
 
-edit file:  vi esxi_backup.sh
+**edit file:**  vi esxi_backup.sh
 
 ```
 #!/bin/sh
@@ -20,8 +20,10 @@ find /scratch/downloads/ -name \*.tgz -exec cp {} /vmfs/volumes/KCP-SDX1-AO-DATA
 find /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ -type f -name '*.tgz' -mtime +20 -exec rm {} \;
 ```
 
-**change permissions:  chmod +x esxi_backup.sh**
+**change permissions:**  chmod +x esxi_backup.sh
 
-Create Cron Job: vi /var/spool/cron/crontabs/root
+**Create Cron Job:** vi /var/spool/cron/crontabs/root
 
+```
 1    1    *   *   *   /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/esxi_backup.sh
+```
