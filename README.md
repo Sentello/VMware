@@ -1,4 +1,4 @@
-# This will remove all snapshots for VMs that have them. The snapshots will be removed from each VM one by one. The command is as follows:
+# This will remove all snapshots for VMs that have them. The snapshots will be removed from each VM one by one:
 ```
 powershell
 Get-VM | Get-Snapshot | Remove-Snapshot -confirm:$false
