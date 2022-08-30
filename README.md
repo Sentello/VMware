@@ -53,12 +53,12 @@ cd /usr/lib/vmware-vmdir/bin
 ./vdcrepadmin -f createagreement -2 -h vc03 -H vc04 -u Administrator
 ```
 Run this command to show all PSCs in the vSphere domain:
-...
+```
 vdcrepadmin -f showservers -h PSC_FQDN -u administrator
-...
+```
 
 VDCREPADMIN showpartners is to display the partner PSC:
 
-...
+```
 vdcrepadmin -f showpartners -h PSC_FQDN -u administrator
-...
+```
