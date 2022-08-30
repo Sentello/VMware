@@ -29,8 +29,11 @@ find /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ -type f -name '*.tgz' -mtime +20 -ex
 ```
 # FIX vCenter replication:
 From this:
+
 ![image](https://user-images.githubusercontent.com/44606412/187520522-dc1d48cd-4f31-4176-b784-89e24aedf6a0.png)
+
 To this:
+
 ![image](https://user-images.githubusercontent.com/44606412/187520586-7a4c0056-194d-46f8-bf56-ce341086578e.png)
 
 ```
