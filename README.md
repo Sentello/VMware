@@ -44,5 +44,5 @@ cd /usr/lib/vmware-vmdir/bin
 ./vdcrepadmin -f createagreement -2 -h vc01 -H vc04 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc02 -H vc03 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc02 -H vc04 -u Administrator
-./vdcrepadmin -f createagreement -2 -h vc3 -H vc04 -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc03 -H vc04 -u Administrator
 ```
