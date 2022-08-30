@@ -41,6 +41,8 @@ To this:
 
 ![image](https://user-images.githubusercontent.com/44606412/187520586-7a4c0056-194d-46f8-bf56-ce341086578e.png)
 
+Use the following command to create a new replication agreement between PSCs:
+
 ```
 cd /usr/lib/vmware-vmdir/bin
 ./vdcrepadmin -f createagreement -2 -h vc01 -H vc02 -u Administrator
@@ -50,3 +52,7 @@ cd /usr/lib/vmware-vmdir/bin
 ./vdcrepadmin -f createagreement -2 -h vc02 -H vc04 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc03 -H vc04 -u Administrator
 ```
+Run this command to show all PSCs in the vSphere domain:
+...
+vdcrepadmin -f showservers -h PSC_FQDN -u administrator
+...
