@@ -27,10 +27,11 @@ find /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ -type f -name '*.tgz' -mtime +20 -ex
 ```
 1    1    *   *   *   /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/esxi_backup.sh
 ```
-# FIX vCenter replication:
+# FIX broken PSC replication:
 From this:
 
-![image](https://user-images.githubusercontent.com/44606412/187520522-dc1d48cd-4f31-4176-b784-89e24aedf6a0.png)
+![image](https://user-images.githubusercontent.com/44606412/187521314-a5fa45d1-2380-4738-a000-e36ffd725e33.png)
+
 
 To this:
 
@@ -38,10 +39,10 @@ To this:
 
 ```
 cd /usr/lib/vmware-vmdir/bin
-./vdcrepadmin -f createagreement -2 -h chodvcenter01.mag.mepnet.cz -H kcpvcenter01.mag.mepnet.cz -u Administrator
-./vdcrepadmin -f createagreement -2 -h chodvcenter01.mag.mepnet.cz -H kcpvcenter02.mag.mepnet.cz -u Administrator
-./vdcrepadmin -f createagreement -2 -h chodvcenter02.mag.mepnet.cz -H kcpvcenter01.mag.mepnet.cz -u Administrator
-./vdcrepadmin -f createagreement -2 -h chodvcenter02.mag.mepnet.cz -H kcpvcenter02.mag.mepnet.cz -u Administrator
-./vdcrepadmin -f createagreement -2 -h chodvcenter01.mag.mepnet.cz -H chodvcenter02.mag.mepnet.cz -u Administrator
-./vdcrepadmin -f createagreement -2 -h kcpvcenter02.mag.mepnet.cz -H kcpvcenter01.mag.mepnet.cz -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc01 -H vc02 -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc01 -H vc03-u Administrator
+./vdcrepadmin -f createagreement -2 -h vc01 -H vc04 -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc02 -H vc03 -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc02 -H vc04 -u Administrator
+./vdcrepadmin -f createagreement -2 -h vc3 -H vc04 -u Administrator
 ```
