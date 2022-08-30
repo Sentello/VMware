@@ -11,9 +11,9 @@ Get-VM | Get-Snapshot | Where-Object {$_.Created -lt (Get-Date 1/Feb/2019)} | Re
 ```
 
 # Backup ESXi with script:
-
+```
 cd /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/esxi_backup
-
+```
 **edit file:**  vi esxi_backup.sh
 
 ```
