@@ -50,7 +50,7 @@ Use the following command to create a new replication agreement between PSCs:
 ```
 cd /usr/lib/vmware-vmdir/bin
 ./vdcrepadmin -f createagreement -2 -h vc01 -H vc02 -u Administrator
-./vdcrepadmin -f createagreement -2 -h vc01 -H vc03-u Administrator
+./vdcrepadmin -f createagreement -2 -h vc01 -H vc03 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc01 -H vc04 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc02 -H vc03 -u Administrator
 ./vdcrepadmin -f createagreement -2 -h vc02 -H vc04 -u Administrator
