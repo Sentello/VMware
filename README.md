@@ -33,7 +33,9 @@ find /vmfs/volumes/KCP-SDX1-AO-DATASTORE01/ -type f -name '*.tgz' -mtime +20 -ex
 ```
 # FIX broken PSC replication:
 https://cloud-duo.com/2021/03/resolving-stale-psc-entries-from-your-vsphere-environment/
+
 https://cloud-duo.com/2021/04/vcenter-error-400-failed-to-connect-to-vmware-lookup-service/
+
 From this:
 
 ![image](https://user-images.githubusercontent.com/44606412/187523956-9069cc8a-ac33-43bf-ac6e-392d769b1aac.png)
