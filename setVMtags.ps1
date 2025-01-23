@@ -1,7 +1,7 @@
 # Get all VMs
 $vms = Get-VM
 
-# Set VM tag if no tag
+# Assign the 'Bronze' tag to the VM if there is no tag
 foreach ($vm in $vms) {
     # Skip VMs with names starting with "vCLS-"
     if ($vm.Name -like "vCLS-*") {
