@@ -13,11 +13,11 @@ This repository contains a collection of scripts for managing VMware vSphere env
 
 These scripts use the `pyvmomi` library to interact with the vSphere API. They require Python 3 and the dependencies listed in `requirements.txt`. They are designed to connect to multiple vCenter servers, using credentials stored in a `.env` file.
 
-*   **`snapshot_cleanup.py`**: Connects to one or more vCenter servers, retrieves all VMs, displays their snapshots, and deletes snapshots older than a specified age (default: 30 days).
+*   **`vcenter_snapshot_cleanup.py`**: Connects to one or more vCenter servers, retrieves all VMs, displays their snapshots, and deletes snapshots older than a specified age (default: 30 days).
     *   **Usage**:
         *   Set environment variables `VCENTER1_HOST`, `VCENTER1_USER`, `VCENTER1_PASSWORD`, `VCENTER2_HOST`, etc., with the credentials for each vCenter server.
-        *   Run the script: `python snapshot_cleanup.py`
-        *   Optionally, specify the age of snapshots to delete using the `-a` or `--age` argument: `python snapshot_cleanup.py -a 7` (deletes snapshots older than 7 days).
+        *   Run the script: `python vcenter_snapshot_cleanup.py`
+        *   Optionally, specify the age of snapshots to delete using the `-a` or `--age` argument: `python vcenter_snapshot_cleanup.py -a 7` (deletes snapshots older than 7 days).
         *   The script will prompt for confirmation before deleting snapshots.
         *   Logs are written to `snapshot_cleanup.log`.
 *   **`vcenter_snapshot_lister.py`**: Connects to one or more vCenter servers, retrieves all VMs, and lists their snapshots in a tabular format.
